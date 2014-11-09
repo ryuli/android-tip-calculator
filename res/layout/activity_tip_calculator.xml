@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/etTransAmount"
+        style="@style/blockA"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/trans_amount_hint"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        style="@style/blockA"
+        android:layout_below="@+id/etTransAmount" >
+
+        <SeekBar
+            android:id="@+id/sbCustomRatio"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnRatio2"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:max="50"
+            android:progressDrawable="@drawable/sb_progress"
+            android:thumb="@drawable/sb_thumb"
+            android:thumbOffset="3dp" />
+
+        <TextView
+            android:id="@+id/tvCustomRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/sbCustomRatio"
+            android:layout_toRightOf="@+id/sbCustomRatio"
+            android:text="@string/zero"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btnRatio3"
+            style="@style/btnDeactivate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sbCustomRatio"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/btnRatio2"
+            android:text="@string/ratio3" />
+
+        <Button
+            android:id="@+id/btnRatio1"
+            style="@style/btnDeactivate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sbCustomRatio"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/btnRatio2"
+            android:text="@string/ratio1" />
+
+        <Button
+            android:id="@+id/btnRatio2"
+            style="@style/btnDeactivate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:text="@string/ratio2" />
+
+        <SeekBar
+            android:id="@+id/sbSplitBy"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/sbCustomRatio"
+            android:layout_below="@+id/sbCustomRatio"
+            android:layout_marginTop="22dp"
+            android:max="20"
+            android:progressDrawable="@drawable/sb_progress"
+            android:thumb="@drawable/sb_thumb"
+            android:thumbOffset="3dp" />
+
+        <TextView
+            android:id="@+id/tvSplitBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/sbSplitBy"
+            android:layout_alignLeft="@+id/tvCustomRatio"
+            android:text="@string/zero"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/tvSplitBy"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tvSplitBy"
+            android:contentDescription="@string/person_plus"
+            android:src="@drawable/person_plus" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/tvCustomRatio"
+            android:layout_toRightOf="@+id/tvCustomRatio"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/label_percentage"
+            android:src="@drawable/percentage" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/blockB"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_centerVertical="true"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/label_total_plus_tip"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvTotalWithTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:text="@string/zero_dollar"
+            android:textColor="#000000"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTotalWithTip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/label_total_plus_tip_per_person"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvTotalWithTipPerPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvTotalWithTip"
+            android:layout_below="@+id/TextView01"
+            android:text="@string/zero_dollar"
+            android:textColor="#000000"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

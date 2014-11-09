@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tip Calculator</string>
+    <string name="ratio1">10%</string>
+    <string name="ratio2">15%</string>
+    <string name="ratio3">20%</string>
+    <string name="custom_tip">Custom tip:</string>
+    <string name="trans_amount_hint">Enter transaction amount</string>
+    <string name="label_total_plus_tip">total + tip</string>
+    <string name="label_total_plus_tip_per_person">total + tip per person</string>
+    <string name="label_split_by">Split by</string>
+    <string name="label_percentage">Percentage</string>
+    <string name="zero_percentage">0%</string>
+    <string name="zero">0</string>
+    <string name="zero_dollar">$0.00</string>
+    <string name="person_plus">Person+</string>
+
+</resources>
